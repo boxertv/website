@@ -17,7 +17,6 @@
   code{
     background:#F8F8FF; 
     border:black dashed 1px; 
-    padding:6px
   }
   p {
      font-family: 'Open Sans', sans-serif;
@@ -34,7 +33,7 @@
 <pre><code>$ sudo pip install requests
 $ sudo pip install python-firebase
 </code></pre>
-For Authentication of requests can be done via following snippet 
+<p>For Authentication of requests can be done via following snippet </p>
 <pre><code>from firebase.firebase import FirebaseApplication
 from firebase.firebase import FirebaseAuthentication
 app = FirebaseApplication('https://myapp.firebaseio.com/', authentication=None)
@@ -45,7 +44,7 @@ user = authentication.get_user()
 print (user.firebase_auth_token)
 result = app.get('/messages', None)
 </code></pre>
-Updating entries can be done via following snippet  
+<p>Updating entries can be done via following snippet  </p>
 <pre><code>result = firebase.post('/users', new_user, {'print': 'pretty'}, {'X_FANCY_HEADER': 'VERY FANCY'})
 print result
 </code></pre>
