@@ -17,14 +17,13 @@
 </head>
 <body>
 <img scr="https://firebase.google.com/images/brand-guidelines/logo-standard.png"/>
-<h3> Setting up Firebase Realtime Database</h3>
-<p> <a href="http://ozgur.github.io/python-firebase/">python-firebase</a> highly makes use of the requests library so before you begin, you need to have that package installed.
+<h3> Setting up Firebase Realtime Database with Python</h3>
+<p>The Firebase Realtime Database is a cloud-hosted database. Data is stored as JSON and synchronized in realtime to every connected client. When you build cross-platform apps with our iOS, Android, and JavaScript SDKs, all of your clients share one Realtime Database instance and automatically receive updates with the newest data.<a href="http://ozgur.github.io/python-firebase/">python-firebase</a> highly makes use of the requests library so before you begin, you need to have that package installed.
 <pre><code>$ sudo pip install requests
 $ sudo pip install python-firebase
 </code></pre>
 For Authentication of requests
-<pre><code>
-from firebase.firebase import FirebaseApplication
+<pre><code>from firebase.firebase import FirebaseApplication
 from firebase.firebase import FirebaseAuthentication
 app = FirebaseApplication('https://myapp.firebaseio.com/', authentication=None)
 authentication = FirebaseAuthentication('secretkey', 'mailid', extra={'id': 123})
@@ -35,8 +34,7 @@ print (user.firebase_auth_token)
 result = app.get('/messages', None)
 </code></pre>
 Updating entries can be done by 
-<pre><code> 
-result = firebase.post('/users', new_user, {'print': 'pretty'}, {'X_FANCY_HEADER': 'VERY FANCY'})
+<pre><code> result = firebase.post('/users', new_user, {'print': 'pretty'}, {'X_FANCY_HEADER': 'VERY FANCY'})
 print result
 </code></pre>
 </p>
