@@ -22,7 +22,7 @@
 <pre><code>$ sudo pip install requests
 $ sudo pip install python-firebase
 </code></pre>
-For Authentication of requests
+For Authentication of requests can be done via following snippet 
 <pre><code>from firebase.firebase import FirebaseApplication
 from firebase.firebase import FirebaseAuthentication
 app = FirebaseApplication('https://myapp.firebaseio.com/', authentication=None)
@@ -33,8 +33,8 @@ user = authentication.get_user()
 print (user.firebase_auth_token)
 result = app.get('/messages', None)
 </code></pre>
-Updating entries can be done by 
-<pre><code> result = firebase.post('/users', new_user, {'print': 'pretty'}, {'X_FANCY_HEADER': 'VERY FANCY'})
+Updating entries can be done via following snippet  
+<pre><code>result = firebase.post('/users', new_user, {'print': 'pretty'}, {'X_FANCY_HEADER': 'VERY FANCY'})
 print result
 </code></pre>
 </p>
