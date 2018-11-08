@@ -22,6 +22,18 @@
 <pre><code>$ sudo pip install requests
 $ sudo pip install python-firebase
 </code></pre>
+For Authentication of requests
+<pre><code>
+from firebase.firebase import FirebaseApplication
+from firebase.firebase import FirebaseAuthentication
+app = FirebaseApplication('https://myapp.firebaseio.com/', authentication=None)
+authentication = FirebaseAuthentication('secretkey', 'mailid', extra={'id': 123})
+app.authentication = authentication
+print (authentication.extra)
+user = authentication.get_user()
+print (user.firebase_auth_token)
+result = app.get('/messages', None)
+</code></pre>
 </p>
 </body>
 <footer style="position: fixed;bottom: 0px;" >
